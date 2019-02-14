@@ -1,0 +1,109 @@
+funcion de una variable con limite de espacio y velocidad.
+
+var x = 200
+var velx = 10;
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+	ellipse(x,200,50,50)
+	if(x<25){
+	velx = velx*-1}
+	if(x>375){
+		velx = velx*-1;
+	}
+	x = x+velx;
+}
+
+
+Otra manera de hacerlo
+donde en FUNCION MOSTRAR ponemos la imagen en este caso la ellipse
+en FUNCION MOVER  la funcion que hara que se mueva que es  x que vale 200 = a x + velx; donde velx vale igual a 10
+yn en FUNCION BOTARX es donde va las condiciones de limites de espacios.
+
+
+function draw() {
+	background(220);
+	mostrar();
+	mover();
+	botarx();
+
+	function mostrar() {
+		ellipse(x, y, 50, 50)
+	}
+
+	function mover() {
+		x = x + velx;
+	}
+
+	function botarx() {
+		if (x < 25) {
+			velx = velx * -1
+		}
+		if (x > 375) {
+			velx = velx * -1
+		}
+	}
+}
+
+
+botar en X y Y
+Funciones de una variable en movimiento de X y Y con limites de espacio 
+
+
+var x = 200
+var velx = 3;
+var y = 200;
+var vely = 5;
+
+function setup() {
+	createCanvas(400, 400);
+}
+
+function draw() {
+	background(220);
+	mostrar();
+	mover();
+	botarx();
+	botary();
+	movery();
+}
+
+
+function mostrar() {
+	ellipse(x, y, 50, 50)
+}
+
+function mover() {
+	x = x + velx;
+}
+
+function botarx() {
+	if (x < 25) {
+		velx = velx * -1
+	}
+	if (x > 375) {
+		velx = velx * -1
+	}
+}
+
+function movery() {
+	y = y + vely
+}
+
+function botary() {
+	// if (x < 25) {
+	// 	vely = vely * -1
+	// }
+	if (y > 25) {
+		vely = vely * -1
+	}
+	if (y < 375) {
+		vely = vely * -1
+	}
+}
+
+
+
