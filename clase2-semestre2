@@ -23,15 +23,19 @@ donde en FUNCION MOSTRAR ponemos la imagen en este caso la ellipse
 en FUNCION MOVER  la funcion que hara que se mueva que es  x que vale 200 = a x + velx; donde velx vale igual a 10
 yn en FUNCION BOTARX es donde va las condiciones de limites de espacios.
 
-
 function draw() {
 	background(220);
-	mostrar();
+	mostrar(random(255),random(255),random(255));         PARA MOSTRAR COLORES  o SIN VALORES EN MOTRAR PARA QUE NO HAGA NADA
 	mover();
 	botarx();
+	botary();
+	movery();
+}
 
-	function mostrar() {
-		ellipse(x, y, 50, 50)
+
+function mostrar(R,G,B) {   
+	fill(R,G,B);                     ]DECLARASA LA GAMA R,G,B DE # NUMEROS  Y FILL o SE RETIRA FILL Y EL R,G,B PARA QUE SE QUEDE ByN
+        ellipse(x, y, 50, 50)
 	}
 
 	function mover() {
